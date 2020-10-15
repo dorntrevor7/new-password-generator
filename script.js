@@ -56,8 +56,8 @@ function writePassword() {
     if (conPass) {
       passwordText.value = password.slice(0, numChoice);
     } else {
-      var tooBad = confirm("Too bad you get to see it anyways!");
       passwordText.value = password.slice(0, numChoice);
+      var tooBad = confirm("Too bad you get to see it anyways!");
     }
   }
 }
