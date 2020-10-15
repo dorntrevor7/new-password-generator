@@ -52,8 +52,13 @@ function writePassword() {
         password = password.concat(newPassword);
       }
     }
-
-    passwordText.value = password.slice(0, numChoice);
+    var conPass = confirm("Are you ready to see your new password?");
+    if (conPass) {
+      passwordText.value = password.slice(0, numChoice);
+    } else {
+      var tooBad = confirm("Too bad you get to see it anyways!");
+      passwordText.value = password.slice(0, numChoice);
+    }
   }
 }
 
